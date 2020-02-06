@@ -1,11 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Artist from '../artist/Artist';
+import { useArtists } from '../../hook/ArtistsHook';
 
 const ArtistLists = () => {
-  const ArtistElements = Artist.map(artist => (
+  const { artists } = useArtists();
+  console.log('list', artists);
+
+  const ArtistElements = artists.map(artist => (
     <li key={artist.id}>
-      <h1>Hi</h1>
+      <Artist />
     </li>
   ));
   return <ul>{ArtistElements}</ul>;

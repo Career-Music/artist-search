@@ -4,4 +4,3 @@ import ArtistLists from '../components/artistLists/ArtistLists';
 export default function App() {
   return <ArtistLists />;
 }
-  
