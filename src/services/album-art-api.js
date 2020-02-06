@@ -3,7 +3,4 @@ export const getAlbumArt = id => {
 
   })
     .then(res => res.json())
-    .then(({ releases }) => releases.map(({ title, date, id }) => ({
-      title, name, id
-    })));
 };
