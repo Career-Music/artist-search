@@ -8,7 +8,9 @@ const useArtists = () => {
   }, []);
 
   const fetchArtists = (artistName) => {
-    return getArtists(artistName).then(setArtists);
+    if(artistName) {
+      return getArtists(artistName).then(setArtists);
+    }
   };
   return { artists, fetchArtists };
 };
