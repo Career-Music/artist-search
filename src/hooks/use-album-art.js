@@ -15,5 +15,5 @@ const useAlbumArt = (albumId) => {
     fetchAlbumArt(albumId);
   }, []);
 
-  return { albumArt, setAlbumArt };
+  return { albumArt };
 };
