@@ -9,7 +9,7 @@ const useAlbumArt = (albumId) => {
       .then((res) => {
         setAlbumArt(res);
       });
-  }; git;
+  };
 
   useEffect(() => {
     fetchAlbumArt(albumId);

@@ -1,4 +1,4 @@
-export const getAlbums = artistId => {
+const getAlbums = artistId => {
   return fetch(`http://musicbrainz.org/ws/2/release?artist=${artistId}&fmt=json`, {
 
   })
@@ -7,3 +7,5 @@ export const getAlbums = artistId => {
       title, name, id
     })));
 };
+
+export default getAlbums;
