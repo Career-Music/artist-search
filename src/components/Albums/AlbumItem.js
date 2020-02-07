@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Albums= () => {
+const AlbumItem= () => {
 return (
   <>
     <div>
-      
+{/* <img src=""></img> */}
     </div>
   </>
 )
