@@ -1,0 +1,12 @@
+h3,
+p {
+  display: inline;
+}
+
+ul {
+  list-style-type: none;
+
+}
+li {
+    padding: 5px;
+}

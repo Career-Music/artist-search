@@ -7,11 +7,11 @@ const AlbumItem = ({ album, artist }) => {
 
   return (
     <>
-      <Link to={ `/album/${album.id}` }>
+      <Link to={`/album/${album.id}`}>
         <div>
-          <img src={ albumArt } onerror={ placeholderAlbum } />
-          <p>${ album.title }</p>
-          <p>${ album.date }</p>
+          <img src={albumArt} onerror={placeholderAlbum} />
+          <p>${album.title}</p>
+          <p>${album.date}</p>
         </div>
       </Link>
     </>
