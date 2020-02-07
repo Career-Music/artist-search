@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ArtistItem from './ArtistItem';
-import { useArtists } from '../../hooks/use-artists';
+import useArtists from '../../hooks/use-artists';
 
 const ArtistList = () => {
   const { artists } = useArtists();
@@ -18,4 +18,4 @@ ArtistList.propTypes = {
   artists: PropTypes.string
 };
 
-export default ArtistLists;
+export default ArtistList;
