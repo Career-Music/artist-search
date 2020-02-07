@@ -4,7 +4,7 @@ const getAlbums = artistId => {
   })
     .then(res => res.json())
     .then(({ releases }) => releases.map(({ title, date, id }) => ({
-      title, name, id
+      title, date, id
     })));
 };
 

@@ -1,6 +1,7 @@
 import React, { Link } from 'react';
 import useAlbumArt from '../../hooks/use-album-art';
 import placeholderAlbum from '../../assets/placeholder.jpg';
+
 const AlbumItem = ({ album, artist }) => {
   const { albumArt, setAlbumArt } = useAlbumArt(album.id);
 
@@ -16,5 +17,6 @@ const AlbumItem = ({ album, artist }) => {
     </>
   );
 };
+
 
 export default AlbumItem;

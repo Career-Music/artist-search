@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import getAlbums from '../services/albums-api';
 
-const useAlbums = () => {
+const useAlbums = (artistId) => {
   const [albums, setAlbums] = useState([]);
 
   const fetchAlbums = (id) => {
@@ -15,7 +15,7 @@ const useAlbums = () => {
     fetchAlbums(artistId);
   }, []);
 
-  return { albums, setAlbums };
+  return { albums, setAlbums, fetchAlbums };
 };
 
 export default useAlbums;
