@@ -7,7 +7,10 @@ const Album = ({ album }) => {
   return (
     <>
       <Header title={ `Songs on ${album.title}` } />
-      { recordings.map((recording) => <RecordingItem key={ recording.id } title={}/>) }
+      <ul>
+        { recordings.map((recording) => <RecordingItem key={ recording.id } title={ recording.title } artistName={ artist.name } />
+        ) }
+      </ul>
     </>
 
   );
