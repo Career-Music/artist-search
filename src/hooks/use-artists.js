@@ -6,12 +6,13 @@ const useArtists = () => {
   useEffect(() => {
     fetchArtists();
   }, []);
-  const fetchArtists = () => {
-    return getArtists('drake').then(artists => {
-      setArtists(artists);
-    });
+
+  const fetchArtists = (artistName) => {
+    if(artistName) {
+      return getArtists(artistName).then(setArtists);
+    }
   };
-  return { artists };
+  return { artists, fetchArtists };
 };
 
 export default useArtists;
