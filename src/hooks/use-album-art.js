@@ -1,4 +1,4 @@
-import { useState, useEffect } from react;
+import { useState, useEffect } from 'react';
 import getAlbumArt from '../services/album-art-api';
 
 const useAlbumArt = (albumId) => {
@@ -9,7 +9,7 @@ const useAlbumArt = (albumId) => {
       .then((res) => {
         setAlbumArt(res);
       });
-  };git
+  }; git;
 
   useEffect(() => {
     fetchAlbumArt(albumId);
@@ -17,3 +17,5 @@ const useAlbumArt = (albumId) => {
 
   return { albumArt };
 };
+
+export default useAlbumArt;

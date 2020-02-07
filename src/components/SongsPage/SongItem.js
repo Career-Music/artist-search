@@ -1,6 +1,6 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
-const RecordingItem = ({ title, artistName }) => {
+import { Link } from 'react-router-dom';
+const SongItem = ({ title, artistName }) => {
 
   return (
     <>
@@ -11,4 +11,4 @@ const RecordingItem = ({ title, artistName }) => {
   );
 };
 
-export default RecordingItem;
+export default SongItem;
