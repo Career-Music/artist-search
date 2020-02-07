@@ -5,11 +5,10 @@ import { useArtists } from '../../hook/ArtistsHook';
 
 const ArtistLists = () => {
   const { artists } = useArtists();
-  console.log('list', artists);
 
   const ArtistElements = artists.map(artist => (
     <li key={artist.id}>
-      <Artist />
+      <Artist name={artist.name} disambiguation={artist.disambiguation} />
     </li>
   ));
   return <ul>{ArtistElements}</ul>;

@@ -9,7 +9,7 @@ export const useArtists = () => {
   }, []);
 
   const fetchArtists = () => {
-    return getArtists('westlife').then(artists => {
+    return getArtists('drake').then(artists => {
       setArtists(artists);
     });
   };
