@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { getArtists } from '../services/artists-api';
-export const useArtists = () => {
+
+const useArtists = () => {
   const [artists, setArtists] = useState([]);
   useEffect(() => {
     fetchArtists();
@@ -12,3 +13,5 @@ export const useArtists = () => {
   };
   return { artists };
 };
+
+export default useArtists;
