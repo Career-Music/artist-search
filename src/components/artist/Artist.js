@@ -1,22 +1,17 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import styles from './Artist.css';
+import AlbumItem from './AlbumItem';
+import Header from '../Header/Header';
 
-const Artist = ({ name, disambiguation }) => {
+const Artist = ({ artist }) => {
+  const albums = useAlbums(artist.id);
   return (
     <>
-      <section>
-        <div>
-          <h3 styles={styles.name}>{name} -</h3>
-          <p>{disambiguation}</p>
-        </div>
-      </section>
+      <Header title={`Albums by ${artist.name}`} />
+      {albums.map(album => (
+        <AlbumItem key={album.id} album={album} />
+      ))}
     </>
   );
-};
-Artist.propTypes = {
-  name: PropTypes.string.isRequired,
-  disambiguation: PropTypes.string
 };
 
 export default Artist;
