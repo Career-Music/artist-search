@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Artist from '../artist/Artist';
+import Artist from './Artist';
 import { useArtists } from '../../hook/ArtistsHook';
 
 const ArtistLists = () => {

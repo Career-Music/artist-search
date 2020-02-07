@@ -1,5 +1,5 @@
 import React from 'react';
-import ArtistLists from '../components/artistLists/ArtistLists';
+import ArtistLists from './ArtistsPage/ArtistLists';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 export default function App() {
