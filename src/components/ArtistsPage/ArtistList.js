@@ -1,20 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Artist from './Artist';
-import { useArtists } from '../../hook/ArtistsHook';
+import ArtistItem from './ArtistItem';
+import { useArtists } from '../../hooks/use-artists';
 
-const ArtistLists = () => {
+const ArtistList = () => {
   const { artists } = useArtists();
 
   const ArtistElements = artists.map(artist => (
-    <li key={artist.id}>
-      <Artist name={artist.name} disambiguation={artist.disambiguation} />
+    <li key={ artist.id }>
+      <ArtistItem name={ artist.name } disambiguation={ artist.disambiguation } />
     </li>
   ));
-  return <ul>{ArtistElements}</ul>;
+  return <ul>{ ArtistElements }</ul>;
 };
 
-ArtistLists.propTypes = {
+ArtistList.propTypes = {
   artists: PropTypes.string
 };
 
