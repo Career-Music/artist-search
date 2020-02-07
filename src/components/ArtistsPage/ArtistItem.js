@@ -19,4 +19,4 @@ ArtistItem.propTypes = {
   disambiguation: PropTypes.string
 };
 
-export default Artist;
+export default ArtistItem;
