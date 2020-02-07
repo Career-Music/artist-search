@@ -7,7 +7,9 @@ const Artist = ({ artist }) => {
   return (
     <>
       <Header title={`Albums by ${artist.name}`} />
-      { albums.map((album) => <AlbumItem key={ album.id } album={ album } />) }
+      {albums.map(album => (
+        <AlbumItem key={album.id} album={album} />
+      ))}
     </>
   );
 };
