@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { getArtists } from '../services/artists-api';
+import getArtists from '../services/artists-api';
 
 const useArtists = () => {
   const [artists, setArtists] = useState([]);
