@@ -1,4 +1,4 @@
-import { useState, useEffect } from react;
+import { useState, useEffect } from 'react';
 import getRecordings from '../services/recordings-api';
 
 const useRecordings = (albumId) => {
@@ -16,3 +16,5 @@ const useRecordings = (albumId) => {
   }, []);
   return { recordings };
 };
+
+export default useRecordings;
