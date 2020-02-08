@@ -6,13 +6,9 @@ import { useParams, useHistory } from 'react-router-dom';
 
 const ArtistsPage = () => {
   const [searchText, setSearchText] = useState('');
-  const { artists, fetchArtists } = useArtists([]);
   const history = useHistory();
   const { artistName } = useParams();
-
-  if(artistName && artistName.length > 0) {
-    fetchArtists(artistName);
-  }
+  const { artists, fetchArtists } = useArtists(artistName);
 
   const handleSearchClick = (text) => {
     history.push(`/search/${text}`);
