@@ -5,13 +5,13 @@ import useAlbums from '../../hooks/use-albums';
 import { useParams } from 'react-router-dom';
 
 const AlbumsPage = () => {
-  const { id } = useParams();
+  const { artistName, id } = useParams();
   const { albums } = useAlbums(id);
   return (
     <>
-      <Header title={ 'Albums' } />
+      <Header title={ `Albums by ${artistName}` } />
       { albums.map(album => (
-        <AlbumItem key={ album.id } album={ album } />
+        <AlbumItem key={ album.id } artistName={artistName} album={ album } />
       )) }
     </>
   );

@@ -12,8 +12,8 @@ export default function App() {
       <Route path='/search/:artistName' component={ ArtistsPage } />
 
       <Route path='/page/:page' component={ ArtistsPage } />
-      <Route path='/artist/:id' component={ AlbumsPage } />
-      <Route path='/album/:id' component={ SongsPage } />
+      <Route path='/artist/:artistName/id/:id' component={ AlbumsPage } />
+      <Route path='/artist/:artistName/album/:id' component={ SongsPage } />
       {/* <Route path='/lyrics/:artist/:title' component={ LyricsPage } /> */ }
     </Router>
   );
