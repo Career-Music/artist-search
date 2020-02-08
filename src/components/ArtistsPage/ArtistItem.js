@@ -9,8 +9,8 @@ const ArtistItem = ({ id, name, disambiguation }) => {
     <section>
       <div>
         <Link to={`/artist/${id}`}>
-          <h3 styles={ styles.name }>{ name } -</h3>
-          <p>{ disambiguation }</p>
+          <h3 styles={ styles.name }>{ name } </h3>
+          <p>-{ disambiguation || ''}</p>
         </Link>
       </div>
     </section>

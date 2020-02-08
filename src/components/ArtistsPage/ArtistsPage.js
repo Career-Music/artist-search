@@ -10,15 +10,21 @@ const ArtistsPage = () => {
   const { artistName } = useParams();
   const { artists, fetchArtists } = useArtists(artistName);
 
-  const handleSearchClick = (text) => {
+  const handleSearchClick = text => {
     history.push(`/search/${text}`);
   };
 
   return (
     <>
       <Header title='Artist Search' />
-      <input type="text" onChange={({ target }) => setSearchText(target.value) } placeholder="Search for Artist" />
-      <button onClick={() => handleSearchClick(searchText)}>Search</button>
+      <form>
+        <input
+          type='text'
+          onChange={({ target }) => setSearchText(target.value)}
+          placeholder='Search for Artist'
+        />
+        <button onClick={() => handleSearchClick(searchText)}>Search</button>
+      </form>
       <ArtistList artists={artists} />
     </>
   );

@@ -7,17 +7,16 @@ const AlbumItem = ({ album }) => {
   // const { albumArt } = useAlbumArt(album.id);
   return (
     <>
-      <Link to={ `/album/${album.id}` }>
+      <Link to={`/album/${album.id}`}>
         <div>
-          <img src={ `http://coverartarchive.org/release/${album.id}/front` } />
+          <img src={`http://coverartarchive.org/release/${album.id}/front`} />
           {/* <img src={ albumArt } onError={ placeholderAlbum } /> */}
-          <p>{ album.title }</p>
-          <p>{ album.date }</p>
+          <p>{album.title}</p>
+          <p>{album.date}</p>
         </div>
       </Link>
     </>
   );
 };
-
 
 export default AlbumItem;
