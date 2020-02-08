@@ -3,9 +3,13 @@ const getAlbums = artistId => {
 
   })
     .then(res => res.json())
-    .then(({ releases }) => releases.map(({ title, date, id }) => ({
-      title, date, id
-    })));
+    .then(({ releases }) => {
+      const mungedReleases = releases.map(({ title, date, id }) => ({
+        title, date, id
+      }));
+      console.log(mungedReleases);
+      return mungedReleases;
+    });
 };
 
 export default getAlbums;

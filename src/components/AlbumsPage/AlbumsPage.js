@@ -6,8 +6,7 @@ import { useParams } from 'react-router-dom';
 
 const AlbumsPage = () => {
   const { id } = useParams();
-  const albums = useAlbums(id);
-  console.log(albums);
+  const { albums } = useAlbums(id);
   return (
     <>
       <Header title={ 'Albums' } />
