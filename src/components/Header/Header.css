@@ -1,0 +1,23 @@
+header {
+  text-align: center;
+  background-color: grey;
+  height: 100px;
+  width: 100%;
+
+  span {
+    font-size: 40px;
+    text-align: Center;
+  }
+
+  
+
+  .title {
+    font-size: 20px !important;
+    text-align: Center !important;
+  }
+}
+
+.link {
+    padding: 30px;
+    color: green;
+  }
