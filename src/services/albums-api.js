@@ -1,13 +1,13 @@
-const getAlbums = artistId => {
-  return fetch(`http://musicbrainz.org/ws/2/release?artist=${artistId}&fmt=json`, {
+const getAlbums = (artistId, page) => {
+  return fetch(`http://musicbrainz.org/ws/2/release?artist=${artistId}&fmt=json&limit=25&offset=${(page - 1) * 25}`, {
 
   })
     .then(res => res.json())
-    .then(({ releases }) => {
-      const mungedReleases = releases.map((release) => ({
+    .then((res) => {
+      const mungedReleases = res.releases.map((release) => ({
         title: release.title, date: release.date, id: release.id, hasArt:release['cover-art-archive'].front
       }));
-      return mungedReleases;
+      return { albums:mungedReleases, count: res.releases['release-count'] };
     });
 };
 
