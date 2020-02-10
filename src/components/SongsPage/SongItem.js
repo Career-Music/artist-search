@@ -5,7 +5,7 @@ const SongItem = ({ title, artistName }) => {
   return (
     <>
       <Link to={ `/lyrics/${artistName}/${title}` }>
-        <li>{ title.title }</li>
+        <li>{ title }</li>
       </Link>
     </>
   );

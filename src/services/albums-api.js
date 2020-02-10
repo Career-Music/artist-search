@@ -4,10 +4,9 @@ const getAlbums = artistId => {
   })
     .then(res => res.json())
     .then(({ releases }) => {
-      const mungedReleases = releases.map(({ title, date, id }) => ({
-        title, date, id
+      const mungedReleases = releases.map((release) => ({
+        title: release.title, date: release.date, id: release.id, hasArt:release['cover-art-archive'].front
       }));
-      console.log(mungedReleases);
       return mungedReleases;
     });
 };
