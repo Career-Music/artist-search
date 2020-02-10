@@ -7,6 +7,7 @@ const useRecordings = (albumId) => {
   const fetchRecordings = (id) => {
     getRecordings(id)
       .then((res) => {
+        console.log(res);
         setRecordings(res);
       });
   };

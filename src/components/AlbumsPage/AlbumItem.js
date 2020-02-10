@@ -1,23 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import useAlbumArt from '../../hooks/use-album-art';
-import placeholderAlbum from '../../assets/placeholder.jpg';
-import styles from './Albums.css';
+import placeholder from '../../assets/placeholder.jpg';
 
-const AlbumItem = ({ album }) => {
-  // const { albumArt } = useAlbumArt(album.id);
+const AlbumItem = ({ artistName, album }) => {
+  console.log(album);
+
   return (
     <>
 
-      <div className={ styles.AlbumItem }>
-        <Link to={ `/album/${album.id}` }>
-          <img src={ `http://coverartarchive.org/release/${album.id}/front` } />
-          {/* <img src={ albumArt } onError={ placeholderAlbum } /> */ }
-          <p className={ styles.title }>{ album.title }</p>
-          <p className={ styles.date }>{ album.date }</p>
+      <div className="AlbumItem">
+        <Link to={ `/artist/${artistName}/album/${album.id}` }>
+          { album.hasArt ?
+            <img src={ `http://coverartarchive.org/release/${album.id}/front` } /> :
+            <img src={ placeholder } /> }
+          <p className="title">{ album.title }</p>
+          <p className="date">{ album.date }</p>
         </Link>
       </div>
-
     </>
   );
 };
