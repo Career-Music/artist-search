@@ -1,0 +1,10 @@
+ol{
+  border: none;
+  a:hover {
+    color:#34BFBF
+  }
+  li{
+    border: none;
+  }
+
+}
