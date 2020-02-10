@@ -17,5 +17,4 @@ const AlbumItem = ({ artistName, album }) => {
   );
 };
 
-
 export default AlbumItem;

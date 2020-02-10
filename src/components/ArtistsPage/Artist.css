@@ -5,7 +5,21 @@ p {
 
 ul {
   list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
 }
 li {
-  padding: 5px;
+  padding: 10px;
+  border: solid 1px black;
+  width: 350px;
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  text-decoration: none;
+  color: black;
 }
