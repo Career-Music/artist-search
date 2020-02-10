@@ -11,8 +11,8 @@ const AlbumItem = ({ artistName, album }) => {
         { album.hasArt ?
           <img src={ `http://coverartarchive.org/release/${album.id}/front` } /> :
           <img src={ placeholder } /> }
-        <p className="title">{ album.title }</p>
-        <p className="date">{ album.date }</p>
+        <p className={styles.title}>{ album.title }</p>
+        <p className={styles.date}>{ album.date }</p>
       </Link>
     </div>
   );

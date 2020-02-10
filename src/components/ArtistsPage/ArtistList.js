@@ -6,7 +6,7 @@ const ArtistList = ({ artists }) => {
 
   const ArtistElements = artists.map(artist => (
     <li key={ artist.id }>
-      <ArtistItem id = { artist.id } name={ artist.name } disambiguation={ artist.disambiguation } />
+      <ArtistItem id={ artist.id } name={ artist.name } disambiguation={ artist.disambiguation } />
     </li>
   ));
   return <ul>{ ArtistElements }</ul>;
