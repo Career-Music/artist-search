@@ -3,12 +3,13 @@ import ArtistList from './ArtistList';
 import Header from '../Header/Header';
 import useArtists from '../../hooks/use-artists';
 import { useParams, useHistory } from 'react-router-dom';
+import Paging from '../Paging/Paging';
 
 const ArtistsPage = () => {
   const [searchText, setSearchText] = useState('');
   const history = useHistory();
   const { artistName } = useParams();
-  const { artists, fetchArtists } = useArtists(artistName);
+  const { artists } = useArtists(artistName);
 
   const handleSearchClick = text => {
     history.push(`/search/${text}`);
@@ -26,6 +27,7 @@ const ArtistsPage = () => {
         <button onClick={() => handleSearchClick(searchText)}>Search</button>
       </form>
       <ArtistList artists={artists} />
+      <Paging />
     </>
   );
 };

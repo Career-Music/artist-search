@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import placeholder from '../../assets/placeholder.jpg';
 
 const AlbumItem = ({ artistName, album }) => {
-  console.log(album);
 
   return (
     <>
