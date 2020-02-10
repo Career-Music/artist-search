@@ -1,5 +1,6 @@
 import React from 'react';
 import AlbumItem from './AlbumItem';
+import Paging from '../Paging/Paging';
 import Header from '../Header/Header';
 import useAlbums from '../../hooks/use-albums';
 import { useParams } from 'react-router-dom';
@@ -14,6 +15,7 @@ const AlbumsPage = () => {
       { albums.map(album => (
         <AlbumItem key={ album.id } artistName={ artistName } album={ album } />
       )) }
+      <Paging />
     </main>
   );
 };

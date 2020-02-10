@@ -1,18 +1,20 @@
 import { useState, useEffect } from 'react';
+import usePaging from './use-paging';
 import getAlbums from '../services/albums-api';
 
-const useAlbums = artistId => {
+const useAlbums = (artistId) => {
   const [albums, setAlbums] = useState([]);
-
-  const fetchAlbums = id => {
-    getAlbums(id).then(res => {
-      setAlbums(res);
-    });
-  };
-
+  const { page } = usePaging();
+  
   useEffect(() => {
     fetchAlbums(artistId);
-  }, []);
+  }, [artistId, page]);
+
+
+  const fetchAlbums = (id) => {
+    getAlbums(id, page).then(({ albums }) => setAlbums(albums));
+  };
+
 
   return { albums, setAlbums, fetchAlbums };
 };
