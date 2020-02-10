@@ -1,23 +1,22 @@
 header {
   text-align: center;
-  background-color: grey;
-  height: 100px;
+  background-color: #414F74;
   width: 100%;
-
-  span {
-    font-size: 40px;
-    text-align: Center;
-  }
-
-  
+  display: flex;
+  justify-content: space-around;
 
   .title {
-    font-size: 20px !important;
-    text-align: Center !important;
+    font-size: 42px;
+    margin: 30px auto;
+    color: #34BFBF
   }
-}
 
 .link {
-    padding: 30px;
-    color: green;
+  font-size: 30px;
+    padding: 42px 20px 0 0;
+    color: #F28B50;
+    &:hover{
+      color: #F2BE5C;
+    }
   }
+}
