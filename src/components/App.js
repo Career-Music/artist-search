@@ -1,6 +1,20 @@
 import React from 'react';
+import ArtistsPage from './ArtistsPage/ArtistsPage';
+import AlbumsPage from './AlbumsPage/AlbumsPage';
+import SongsPage from './SongsPage/SongsPage';
+import LyricsPage from './LyricsPage/LyricsPage';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 export default function App() {
-  return <h1>Hello World</h1>;
+  return (
+    <Router>
+      <Route exact path='/' component={ ArtistsPage } />
+      <Route path='/search/:artistName/page/:page' component={ ArtistsPage } />
+      <Route exact path='/search/:artistName' component={ ArtistsPage } />
+      <Route path='/artist/:artistName/id/:id' component={ AlbumsPage } />
+      <Route path='/artist/:artistName/id/:id/page/:page' component={ AlbumsPage } />
+      <Route path='/artist/:artistName/album/:id' component={ SongsPage } />
+      <Route path='/lyrics/:artist/:title' component={ LyricsPage } />
+    </Router>
+  );
 }
-  
