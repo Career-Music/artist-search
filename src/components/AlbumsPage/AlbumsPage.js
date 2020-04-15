@@ -10,16 +10,14 @@ const AlbumsPage = () => {
   const { artistName, id } = useParams();
   const { albums } = useAlbums(id);
   return (
-    <main className={ styles.AlbumsPage }>
-      <Header title={ `Albums by ${artistName}` } />
-      { albums.map(album => (
-        <AlbumItem key={ album.id } artistName={ artistName } album={ album } />
-      )) }
+    <main className={styles.AlbumsPage}>
+      <Header title={`Albums by ${artistName}`} />
+      {albums.map(album => (
+        <AlbumItem key={album.id} artistName={artistName} album={album} />
+      ))}
       <Paging />
     </main>
   );
 };
-
-
 
 export default AlbumsPage;

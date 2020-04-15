@@ -11,13 +11,12 @@ const SongsPage = () => {
 
   return (
     <>
-      <Header title={ 'Songs' } />
+      <Header title={'Songs'} />
       <ol>
-        { recordings.map((recording) => <SongItem key={ recording.id } title={ recording.title } artistName={ artistName } />
-        ) }
+        {recordings.map((recording) => <SongItem key={recording.id} title={recording.title} artistName={artistName} />
+        )}
       </ol>
     </>
-
   );
 };
 
